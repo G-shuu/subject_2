@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Picturegram</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <header>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+      </button>
+       <%= link_to "Picturegram", root_path, class: "navbar-brand" %>
+      </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+          <li><%= link_to "投稿", pictures_path %></li>
+         </ul>
+       </li>
+      </ul>
+     </div><!-- /.navbar-collapse -->
+     </div><!-- /.container-fluid -->
+     </nav>
+  </header>
+  <body>
+    <%= yield %>
+
+    <footer>
+      <p>© 2017 Copyright Picturegram</p>
+    </footer>
+  </body>
+</html>
