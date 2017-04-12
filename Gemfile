@@ -42,6 +42,10 @@ group :development, :test do
   # Local mailer confirmation
   gem 'letter_opener_web'
 
+  # For Debug
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
@@ -64,3 +68,7 @@ gem 'jquery-turbolinks'
 
 # Login Function
 gem 'devise'
+
+# Admin Authority Function
+gem 'rails_admin'
+gem 'cancan'
