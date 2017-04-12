@@ -5,10 +5,4 @@ class NoticeMailer < ApplicationMailer
   #
   #   en.notice_mailer.sendmail_picture.subject
   #
-  def sendmail_picture(user)
-    @user = user
-
-    mail to: user.email,
-      subject: '投稿されました'
-  end
 end
