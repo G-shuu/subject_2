@@ -38,6 +38,10 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # Local mailer confirmation
+  gem 'letter_opener_web'
+
 end
 
 group :development do
@@ -57,3 +61,6 @@ gem 'twitter-bootstrap-rails'
 
 # JavaScript
 gem 'jquery-turbolinks'
+
+# Login Function
+gem 'devise'
