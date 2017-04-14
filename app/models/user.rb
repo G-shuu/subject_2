@@ -5,7 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
   has_many :pictures
 
-  
+  def self.create_unique_string
+    SecureRandom.uuid
+  end
 
   def self.find_for_facebook_oauth(auth, signed_in_resource = nil)
     user = User.find_by(email: auth.info.email)
@@ -41,9 +43,5 @@ class User < ApplicationRecord
       user.save
     end
     user
-  end
-
-  def self.create_unique_string
-    SecureRandom.uuid
   end
 end
