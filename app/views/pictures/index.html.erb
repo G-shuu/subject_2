@@ -8,10 +8,18 @@
   <div class="row">
    <p>タイトル：<%= picture.title %></p>
    <p>内容：<%= picture.content %></p>
+   <p>投稿者：<%= picture.user.name %></p>
+   <% if picture.image? %>
+   <span><%= image_tag(picture.image) %></span>
+   <% end %>
+   <%= link_to "投稿を見る", picture_path(picture.id), class: "btn btn-default btn-sm btn-info" %>
    <%= link_to "投稿を編集する", edit_picture_path(picture.id), class: "btn btn-default btn-sm btn-success" %>
    <%= link_to "投稿を削除する", picture_path(picture.id) ,method: :delete, data: {confirm: "本当に削除していいですか？"}, class: "btn btn-default btn-sm btn btn-danger" %>
   </div>
   <% end %>
+  <div class="pages">
+    <%= paginate @pictures %>
+  </div>
  </div>
 </div>
 

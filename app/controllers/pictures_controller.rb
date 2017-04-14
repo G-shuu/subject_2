@@ -3,8 +3,7 @@ class PicturesController < ApplicationController
   before_action :id_get_picture, only: [:edit, :update, :destroy]
 
   def index
-    @pictures = Picture.all
-    raise
+    @pictures = Picture.page(params[:page]).per(1)
   end
 
   def new
@@ -33,6 +32,7 @@ class PicturesController < ApplicationController
   end
 
   def show
+    @picture = Picture.find(params[:id])
   end
 
   def destroy
@@ -43,7 +43,7 @@ class PicturesController < ApplicationController
 
   private
     def picture_params
-      params.require(:picture).permit(:title, :content)
+      params.require(:picture).permit(:title, :content, :image, :image_cache)
     end
 
     def id_get_picture

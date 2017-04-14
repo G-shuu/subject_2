@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  background-color: navy;
+  background-color: #EEEEEE;
   height: 50px;
 }
 
@@ -9,18 +9,18 @@ header {
 }
 .navbar {
     background-color: transparent;
-    color: white;
+    color: black;
     margin-bottom: 0px;
 }
 .navbar-default {
   .navbar-brand {
-    color: #ccc;
+    color: black;
     &:hover {
       color: white;
     }
   }
   .navbar-nav > li > a {
-    color: #ccc;
+    color: black;
     &:hover, &:focus {
       color: white;
     }
@@ -30,7 +30,7 @@ header {
     color: white;
     &:hover, &:focus {
       background-color: transparent;
-      color: white;
+      color: black;
     }
   }
 }
@@ -39,7 +39,7 @@ header {
     color: #ccc;
     text-align: center;
     &:hover, &:focus {
-      color: white;
+      color: black;
     }
   }
   .navbar-default .navbar-toggle {
@@ -51,22 +51,23 @@ header {
 }
 
 .main-header img {
-  display: inline-block;
-  margin-left:auto;
-  margin-right:auto;
-  text-align: center;
-  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
 }
 
 .main-header p {
-  text-align: justify;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 17px;
 }
 
 footer {
   width: 100%;
-  background-color: navy;
-  color: white;
+  background-color: #EEEEEE;
+  color: black;
   margin: auto;
   padding: 12px 0 8px 0;
   font-size: 13px;
@@ -104,4 +105,12 @@ footer {
   border-color: #eed3d7;
   color: #b94a48;
   text-align: center;
+}
+
+.text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 25px;
 }

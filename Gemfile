@@ -46,6 +46,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  # For ENV File
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -72,3 +75,17 @@ gem 'devise'
 # Admin Authority Function
 gem 'rails_admin'
 gem 'cancan'
+
+# SNS Login Authority
+gem 'omniauth-oauth2', '~> 1.3.1'
+gem 'faraday', '< 0.10'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+# Image Uploader
+gem 'carrierwave'
+gem 'rmagick'
+
+# Page scroll
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
